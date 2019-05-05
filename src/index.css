@@ -3,8 +3,8 @@ body {
   padding: 20px;
   margin: 0;
 }
-h1, h2, p, label, ul, li {
-  font-family: sans-serif;
+div, h1, h2, p, label, ul, li {
+  font-family: helvetica, sans-serif;
 }
 
 img {
@@ -48,3 +48,11 @@ ul.header li a {
 .active {
     background-color: #0099FF;
   }
+
+#display-data-Container {
+  font-family: helvetica, sans-serif;
+}
+
+#display-data {
+  font-family: helvetica, sans-serif;
+}

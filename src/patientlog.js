@@ -1,68 +1,64 @@
 import React, { Component } from "react";
+import moment from 'moment';
  
-class patient extends Component {
+class patientlog extends Component {
 
-  constructor(props) {
-    super(props);     //inherit from React.Component
-  }
-  
-  render() {
-    console.log(this.state);
-    return( 
-      <div>
-        <h1>Patient Data</h1>
-        <ul>
-          <li>Patient Name: Mary Smith</li>
-          <li>Age: 24</li>
-          <li>Sex: F</li>
-          <li>Height: 5' 8"</li>
-          <li>Weight: 120 lbs</li>
-        </ul>
+  constructor() {
+    super();
 
-        <h1>Past Medical History</h1>
-        <ul>
-          <li>Diabetes - Type 1</li>
-          <li>Von Willebrand Disease - Type 1</li> 
-          <li></li> 
-          <br></br>
-        </ul>
+    this.displayData = [];
 
-        <h1>Family Medical History</h1>
-        <ul>
-          <li>Mother</li>
-          <li>Deceased, age 55, myocardial infarction</li>
-          <li>Father</li> 
-          <li>Nil</li>
-          <li>Sibling</li> 
-          <li>N/A</li>
-          <br></br>
-        </ul>
+    this.state = {
+      showdata : this.displayData,
+      postVal : ""
+    }
 
-        <h1>Medications</h1>
-        <ul>
-          <li>Insulin</li>
-          <li>DDAVP</li>
-        </ul>
+    this.appendData = this.appendData.bind(this);
+    this.handleChange = this.handleChange.bind(this);
 
-        <h1>Allergies</h1>
-        <ul>
-          <li>Contrast</li>
-          <li>Latex</li>
-          <li>Penicillin</li>
-        </ul>
+    this.baseState = this.state;
+  };
 
-        <h1>Lifestyle Habits</h1>
-        <ul>
-          <li>Smoking - 1 pack per day since age 18</li>
-          <br></br>
-          <li>Alcohol - On occasion, 1-2 consumptions</li>
-          <br></br>
-          <li>Drug Use - Cannabis, on occasion, roughly 1 joint per month</li>
-          <br></br>
-        </ul>
-      </div>    
-    );
-  }
+appendData() {
+  this.displayData.push(<div id="display-data"><pre>{moment().format('MMMM Do YYYY, h:mm:ss a')} {this.state.postVal}</pre></div>);
+  this.setState({
+    showdata : this.displayData,
+    postVal : ""
+  });
 }
 
-export default patient;
+resetForm = () => {
+  this.setState(this.baseState)
+  this.displayData = [];
+}
+
+handleChange(e) {
+  let getTextAreaValue = e.target.value;
+  this.setState({
+    postVal :getTextAreaValue
+  });
+}
+
+render() {
+  return (
+        <div id="mainContainer">
+
+          <h1>Live Patient Log</h1>
+
+          <div id="display-data-Container">
+            <p>{this.displayData}</p>
+          </div>
+          
+          <textarea rows="10" cols="100" placeholder="Enter log entry" value={this.state.postVal} onChange={this.handleChange} ></textarea>
+          
+          <div>
+            <input type="submit" className="button" onClick={this.appendData} value="Submit"/>
+            <button onClick={this.resetForm} type="button">Clear</button>
+          </div>
+
+        </div>
+    );
+  } 
+}
+
+export default patientlog;
