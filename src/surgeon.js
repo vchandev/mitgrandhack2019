@@ -21,9 +21,9 @@ class patient extends Component {
 
         <h1>Reason of Consultation and Final Radiological Findings</h1>
         <ul>
-          <li>04/05/2019: RLQ Pain, fever and positive peritoneal findings, R/O appendicitis. Click to see more detailed patient note from ER consult. </li>
+          <li>04/05/2019: RLQ Pain, fever and positive peritoneal findings, R/O appendicitis. Click to see more detailed patient note from ER consult.</li>
           <ul>
-            <li>Final Radiological Findings: Strong clinical suspicion of appendicitis. Click to be redirected to full radiology report. </li>
+            <li id="final">Final Radiological Findings: Strong clinical suspicion of appendicitis. Click to be redirected to full radiology report.</li>
           </ul>
           <li></li>
         </ul>
@@ -79,7 +79,7 @@ class patient extends Component {
         <h1>Conclusion:</h1>
         <ul>
           <li>TREATMENT CHOICE DEPENDENT CRITERIA (identified by AI)- Age: under 30, sx present under 48hr, generalized tenderness on abdominal examination, WBC Count: over 19.4 x 10^9 L, Abcess: keyword identified in radiological report</li>
-          <li>FINAL INDICATION recommended: OPEN APPENDECTOMY or Early Laparoscopic Appendectomy WITH Blake drain installation + pre and post op antibiotherapy</li>
+          <li id="final">FINAL INDICATION recommended: OPEN APPENDECTOMY or Early Laparoscopic Appendectomy WITH Blake drain installation + pre and post op antibiotherapy</li>
           <li></li>
         </ul>
  
