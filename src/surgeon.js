@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
+import radiologist from "./radiologist";
  
 class patient extends Component {
 
@@ -19,14 +21,18 @@ class patient extends Component {
           <li>Weight: 120 lbs</li>
         </ul>
 
+        <hr width="60%" align="left"></hr>
+
         <h1>Reason of Consultation and Final Radiological Findings</h1>
         <ul>
-          <li>04/05/2019: RLQ Pain, fever and positive peritoneal findings, R/O appendicitis. Click to see more detailed patient note from ER consult.</li>
+          <li>04/05/2019: RLQ Pain, fever and positive peritoneal findings, R/O appendicitis. Click <Link to="/erphysician">here</Link> to see more detailed patient note from ER consult.</li>
           <ul>
-            <li id="final">Final Radiological Findings: Strong clinical suspicion of appendicitis. Click to be redirected to full radiology report.</li>
+            <li id="final">Final Radiological Findings: Strong clinical suspicion of appendicitis. Click <Link to="/radiologist#radiologyreport">here</Link> to be redirected to full radiology report.</li>
           </ul>
           <li></li>
         </ul>
+
+        <hr width="60%" align="left"></hr>
 
         <h1>Relevant Laboratory Tests</h1>
         <ul>
@@ -37,9 +43,11 @@ class patient extends Component {
           <li>PTT: 12 seconds</li>
           <li>PT: 29 seconds</li>
           <li>VWF: 25 IU/dL</li>
-          <li>OTHER TESTS ORDERED (less relevant to acute surgery): Click to be directed to the full patient note</li>
+          <li>OTHER TESTS ORDERED (less relevant to acute surgery): Click  to be directed to the full patient note</li>
           <br></br>
         </ul>
+
+        <hr width="60%" align="left"></hr>
 
         <h1>Relevant past Medical History to Surgery</h1>
         <ul>
@@ -48,6 +56,8 @@ class patient extends Component {
           <li></li> 
           <br></br>
         </ul>
+
+        <hr width="60%" align="left"></hr>
 
         <h1>Vital Signs</h1>
         <ul>
@@ -62,12 +72,15 @@ class patient extends Component {
           </ul>
         </ul>
 
+        <hr width="60%" align="left"></hr>
 
         <h1>Medications</h1>
         <ul>
           <li>Insulin</li>
           <li>DDAVP</li>
         </ul>
+
+        <hr width="60%" align="left"></hr>
 
         <h1>Allergies</h1>
         <ul>
@@ -76,12 +89,16 @@ class patient extends Component {
           <li>Penicillin</li>
         </ul>
 
+        <hr width="60%" align="left"></hr>
+
+        <div id="treatment">
         <h1>Conclusion:</h1>
-        <ul>
-          <li>TREATMENT CHOICE DEPENDENT CRITERIA (identified by AI)- Age: under 30, sx present under 48hr, generalized tenderness on abdominal examination, WBC Count: over 19.4 x 10^9 L, Abcess: keyword identified in radiological report</li>
-          <li id="final">FINAL INDICATION recommended: OPEN APPENDECTOMY or Early Laparoscopic Appendectomy WITH Blake drain installation + pre and post op antibiotherapy</li>
-          <li></li>
-        </ul>
+          <ul>
+            <li>TREATMENT CHOICE DEPENDENT CRITERIA (identified by AI)- Age: under 30, sx present under 48hr, generalized tenderness on abdominal examination, WBC Count: over 19.4 x 10^9 L, Abcess: keyword identified in radiological report</li>
+            <li id="final">FINAL INDICATION recommended: OPEN APPENDECTOMY or Early Laparoscopic Appendectomy WITH Blake drain installation + pre and post op antibiotherapy</li>
+            <li></li>
+          </ul>
+        </div>
  
       </div>    
     );

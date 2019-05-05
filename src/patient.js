@@ -19,6 +19,8 @@ class patient extends Component {
           <li>Weight: 120 lbs</li>
         </ul>
 
+        <hr width="60%" align="left"></hr>
+
         <h1>Past Medical History</h1>
         <ul>
           <li>Diabetes - Type 1</li>
@@ -26,6 +28,8 @@ class patient extends Component {
           <li></li> 
           <br></br>
         </ul>
+
+        <hr width="60%" align="left"></hr>
 
         <h1>Family Medical History</h1>
         <ul>
@@ -38,11 +42,15 @@ class patient extends Component {
           <br></br>
         </ul>
 
+        <hr width="60%" align="left"></hr>
+
         <h1>Medications</h1>
         <ul>
           <li>Insulin</li>
           <li>DDAVP</li>
         </ul>
+
+        <hr width="60%" align="left"></hr>
 
         <h1>Allergies</h1>
         <ul>
@@ -50,6 +58,8 @@ class patient extends Component {
           <li>Latex</li>
           <li>Penicillin</li>
         </ul>
+
+        <hr width="60%" align="left"></hr>
 
         <h1>Lifestyle Habits</h1>
         <ul>

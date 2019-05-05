@@ -20,6 +20,8 @@ class erphysician extends React.Component {
           <li>Weight: 120 lbs</li>
         </ul>
 
+        <hr width="60%" align="left"></hr>
+
         <h1>Vital Signs</h1>
         <ul>
           <li>Heart Rate: 90 bpm</li>
@@ -29,6 +31,8 @@ class erphysician extends React.Component {
           <li>Temp: 39.4 C</li>
           <li>Appearance: Pale complexion, severe, generalized abdominal pain</li>
         </ul>
+
+        <hr width="60%" align="left"></hr>
 
         <h1>Reason of Consultation</h1>
         <ul>
@@ -41,6 +45,8 @@ class erphysician extends React.Component {
           <br></br>
         </ul>
 
+        <hr width="60%" align="left"></hr>
+
         <h1>Physical Exam Findings:</h1>
         <ul>
           <li>RLQ tenderness </li>
@@ -51,6 +57,8 @@ class erphysician extends React.Component {
           <li></li>
           <br></br>
         </ul>
+
+        <hr width="60%" align="left"></hr>
 
         <h1>Lab tests ordered + live results:</h1>
         <ul>
@@ -74,6 +82,8 @@ class erphysician extends React.Component {
           <br></br>
         </ul>
 
+        <hr width="60%" align="left"></hr>
+
         <h1>Imagery ordered:</h1>
         <ul>
           <li>Plain and Triphasic IV Contrast enhanced axial CT Scan of abdomen and pelvis</li>
@@ -84,6 +94,8 @@ class erphysician extends React.Component {
           <li></li>
           <br></br>
         </ul>
+
+        <hr width="60%" align="left"></hr>
 
         <h1>Clinical Suspicions at this stage</h1>
         <ul>

@@ -51,9 +51,13 @@ render() {
           
           <textarea rows="10" cols="100" placeholder="Enter log entry" value={this.state.postVal} onChange={this.handleChange} ></textarea>
           
+          <br></br>
+          <br></br>
+          
           <div>
-            <input type="submit" className="button" onClick={this.appendData} value="Submit"/>
-            <button onClick={this.resetForm} type="button">Clear</button>
+            <input id="submitbutton" type="submit" className="button" onClick={this.appendData} value="Submit"/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input id="resetbutton" onClick={this.resetForm} type="button" value="Clear"/>
           </div>
 
         </div>

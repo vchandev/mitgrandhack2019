@@ -7,16 +7,16 @@ import {
 import Home from "./Home";
 import patient from "./patient";
 import surgeon from "./surgeon";
-import radiologist from "./radiologist"
+import radiologist from "./radiologist";
 import erphysician from "./erphysician";
-import patientlog from "./patientlog"
+import patientlog from "./patientlog";
  
 class Main extends Component {
   render() {
     return (
         <HashRouter>
             <div>
-                <h1>Pre-Surgical Operation Patient Data</h1>
+                <h1 id="bigtitle">S Y N D Y O S</h1>
                 <ul className="header">
                     <li><NavLink exact to="/">Home</NavLink></li>
                     <li><NavLink to="/patient">Patient</NavLink></li>
